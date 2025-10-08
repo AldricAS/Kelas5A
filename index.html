@@ -25,14 +25,52 @@
       animation: slideDown 1s ease;
     }
 
-    header h1 { margin: 0; font-size: 2.5em; font-weight: bold; animation: fadeIn 1s ease; }
-    header h2 { margin: 10px 0 25px 0; font-size: 1.2em; opacity: 0.9; animation: fadeIn 2s ease; }
-    header a { display: inline-block; padding: 12px 28px; background-color: #ffd699; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.3s ease; animation: bounce 2s infinite; }
-    header a:hover { background-color: #ffc966; transform: scale(1.1); }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      animation: fadeIn 1s ease;
+    }
 
-    main { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    header h2 {
+      margin: 10px 0 25px 0;
+      font-size: 1.2em;
+      font-weight: normal;
+      opacity: 0.9;
+      animation: fadeIn 2s ease;
+    }
 
-    h2.section-title { color: #ff8c42; margin-bottom: 20px; border-bottom: 2px solid #ffb347; display: inline-block; padding-bottom: 5px; animation: fadeIn 1s ease; }
+    header a {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #ffd699;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    header a:hover {
+      background-color: #ffc966;
+      transform: scale(1.1);
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2.section-title {
+      color: #ff8c42;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ffb347;
+      display: inline-block;
+      padding-bottom: 5px;
+      animation: fadeIn 1s ease;
+    }
 
     .grid {
       display: grid;
@@ -54,8 +92,16 @@
       transform: translateY(20px);
     }
 
-    .card.visible { opacity: 1; transform: translateY(0); transition: all 0.6s ease-out; }
-    .card:hover { transform: translateY(-10px) rotate(-1deg); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) rotate(-1deg);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
 
     .about {
       background: #ffe0b2;
@@ -66,12 +112,19 @@
       opacity: 0;
       transform: translateY(20px);
     }
-    .about.visible { opacity: 1; transform: translateY(0); transition: all 0.8s ease-out; }
+
+    .about.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease-out;
+    }
 
     .overlay {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(0,0,0,0.85);
       display: none;
       justify-content: center;
@@ -91,8 +144,23 @@
       animation: popIn 0.5s ease;
     }
 
-    .overlay-content img { width: 100%; border-radius: 10px; }
-    .close-btn { position: absolute; top: 10px; right: 15px; background: #ff8c42; color: white; border: none; padding: 5px 10px; font-size: 16px; border-radius: 5px; cursor: pointer; }
+    .overlay-content img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: #ff8c42;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
     .album {
       margin-top: 50px;
@@ -110,19 +178,18 @@
       opacity: 0;
       transform: translateY(20px) rotate(-2deg);
     }
-    .album img.visible { opacity: 1; transform: translateY(0) rotate(0); transition: all 0.6s ease-out; }
-    .album img:hover { transform: scale(1.1) rotate(1deg); filter: brightness(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 
-    .spotify-container {
-      margin-top: 50px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
+    .album img.visible {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+      transition: all 0.6s ease-out;
     }
-    .spotify-container.visible { opacity: 1; transform: translateY(0); }
 
-    iframe { border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); width: 100%; max-width: 600px; height: 380px; }
+    .album img:hover {
+      transform: scale(1.1) rotate(1deg);
+      filter: brightness(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
     @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
     @keyframes slideDown { from {opacity:0; transform: translateY(-50px);} to {opacity:1; transform: translateY(0);} }
@@ -182,16 +249,11 @@
     <p>Website ini dibuat oleh Aldric untuk kelas 5A agar semua siswa dan wali kelas bisa melihat informasi kelas dengan mudah.</p>
   </div>
 
-  <h2 class="section-title">Album Kenangan</h2>
-  <div class="album" id="album">
-    <img src="https://iili.io/KjuQ3zP.jpg" alt="Kenangan">
-    <img src="https://iili.io/KjuQdmB.jpg" alt="Kenangan">
-    <img src="https://iili.io/KjuQJeV.jpg" alt="Kenangan">
-  </div>
-
-  <div class="spotify-container" id="spotify">
-    <h2 class="section-title">Playlist Kelas 5A</h2>
-    <iframe src="https://open.spotify.com/embed/playlist/0VLyWcK7c84veI7jQ25Sgk?si=K27pNrsuTdGj1qzUufhXrA" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div class="album">
+    <h2 class="section-title">Album Kenangan</h2>
+    <img src="https://iili.io/KjNyH5N.jpg" alt="Kenangan 1">
+    <img src="https://iili.io/KjNy9Jp.jpg" alt="Kenangan 2">
+    <img src="https://iili.io/KjNyJeI.jpg" alt="Kenangan 3">
   </div>
 
 </main>
@@ -199,35 +261,35 @@
 <div class="overlay" id="overlay">
   <div class="overlay-content" id="overlay-content">
     <button class="close-btn" onclick="closeOverlay()">X</button>
-    <h2 id="overlay-name"></h2>
-    <img id="overlay-img" src="" alt="">
+    <h3 id="overlay-name"></h3>
+    <img id="overlay-img" src="" alt="Foto Siswa">
   </div>
 </div>
 
 <script>
-  // Overlay functions
-  function showOverlay(name, img) {
-    document.getElementById('overlay-name').innerText = name;
-    document.getElementById('overlay-img').src = img;
-    document.getElementById('overlay').style.display = 'flex';
-  }
+function showOverlay(name, img){
+  document.getElementById('overlay-name').innerText = name;
+  document.getElementById('overlay-img').src = img;
+  document.getElementById('overlay').style.display = 'flex';
+}
 
-  function closeOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-  }
+function closeOverlay(){
+  document.getElementById('overlay').style.display = 'none';
+}
 
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {threshold: 0.2});
-
-  document.querySelectorAll('.card, .about, .album img, .spotify-container').forEach(el => {
-    observer.observe(el);
+function reveal(){
+  let elements = document.querySelectorAll('.card, .album img, .about');
+  elements.forEach(el => {
+    let top = el.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+    if(top < windowHeight - 50){
+      el.classList.add('visible');
+    }
   });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
 </script>
 
 </body>
